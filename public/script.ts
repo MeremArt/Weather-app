@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const searchButton = document.getElementById("searchButton");
+  const searchButton = document.getElementById(
+    "searchButton"
+  ) as HTMLButtonElement;
   searchButton.addEventListener("click", function () {
     getWeather();
     hideInput();
@@ -7,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function getWeather() {
-  const cityInput = document.getElementById("city");
+  const cityInput = document.getElementById("city") as HTMLInputElement;
   const city = cityInput.value;
 
   $.ajax({
@@ -25,8 +27,10 @@ function getWeather() {
 
 function hideInput() {
   const inputContainer = document.getElementById("weather-container");
-  const cityInput = document.getElementById("city");
-  const searchButton = document.getElementById("searchButton");
+  const cityInput = document.getElementById("city") as HTMLInputElement;
+  const searchButton = document.getElementById(
+    "searchButton"
+  ) as HTMLButtonElement;
   const header = document.getElementById("Header"); // Corrected the ID
 
   if (inputContainer && cityInput && searchButton && header) {
@@ -36,7 +40,7 @@ function hideInput() {
   }
 }
 
-function displayWeather(data) {
+function displayWeather(data: any) {
   const tempDiv = document.getElementById("temp-div");
   const weatherInfo = document.getElementById("weather-info");
   const cityDisplay = document.getElementById("cityDisplay");
