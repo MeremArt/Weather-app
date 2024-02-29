@@ -1,0 +1,22 @@
+{
+  "name": "weatheri-app",
+  "version": "1.0.0",
+  "description": "weather application ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon dist/index.js"
+  },
+  "author": "ugo chinemerem",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.22",
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.29",
+    "typescript": "^5.3.3"
+  }
+}
